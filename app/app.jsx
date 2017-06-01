@@ -6,6 +6,8 @@ var Route = require('react-router').Route;
 would have accomplished the same
 */
 var Main = require('Main');
+var Timer = require('Timer');
+var Countdown = require('Countdown');
 
 // Load foundation
 require('style!css!foundation-sites/dist/foundation.min.css')
@@ -17,6 +19,8 @@ require('style!css!sass!applicationStyles')
 ReactDOM.render(
     <Router history={hashHistory}>
       <Route path="/" component={Main}>
+        <IndexRoute component={Timer}/>
+        <Route path="countdown" component={Countdown} />
       </Route>
     </Router>,
     document.getElementById('app')
