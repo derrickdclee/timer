@@ -12,6 +12,7 @@ var Countdown = React.createClass({
   },
 
   componentDidUpdate: function(prevProps, prevState) {
+    // if there's been a change in the countdownStatus
     if (this.state.countdownStatus !== prevState.countdownStatus) {
       switch (this.state.countdownStatus) {
         case 'started':
@@ -71,6 +72,7 @@ var Countdown = React.createClass({
 
     return (
       <div>
+        <h1 className='page-title'>Countdown App</h1>
         <Clock totalSeconds={count} />
         {renderControlArea()}
       </div>
