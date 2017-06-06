@@ -48,6 +48,7 @@ var Timer = React.createClass({
   },
 
   render: function () {
+    debugger;
     var {count, timerStatus} = this.state;
 
     return (
