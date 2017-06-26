@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   entry: [
@@ -46,7 +47,11 @@ module.exports = {
       }
     ]
   },
-
+  sassLoader: {
+    includePaths: [
+      path.resolve(__dirname, './node_modules/foundation-sites/scss')
+    ]
+  },
   // for easier debugging
   devtool: 'cheap-module-eval-source-map'
 };
